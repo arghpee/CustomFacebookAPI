@@ -35,7 +35,7 @@
     self.imgProfilePicture.layer.borderColor = [UIColor whiteColor].CGColor;
     self.imgProfilePicture.layer.borderWidth = 1.0;
     
-    [self hideUserInfo:YES];
+    [self hideUserInfo:NO];
     self.activityIndicator.hidden = YES;
     
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
