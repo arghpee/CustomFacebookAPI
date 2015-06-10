@@ -12,6 +12,14 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgProfilePicture;
+@property (weak, nonatomic) IBOutlet UILabel *lblFullname;
+@property (weak, nonatomic) IBOutlet UILabel *lblEmail;
+@property (weak, nonatomic) IBOutlet UILabel *lblStatus;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *btnToggleLoginState;
+
+-(IBAction)toggleLoginState:(id)sender;
 
 @end
 

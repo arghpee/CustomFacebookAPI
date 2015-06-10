@@ -18,6 +18,7 @@
 		F85C12491B28255D0027C37F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85C12461B28255D0027C37F /* FBSDKCoreKit.framework */; };
 		F85C124A1B28255D0027C37F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85C12471B28255D0027C37F /* FBSDKLoginKit.framework */; };
 		F85C124B1B28255D0027C37F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85C12481B28255D0027C37F /* FBSDKShareKit.framework */; };
+		F85C124D1B28351E0027C37F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85C124C1B28351E0027C37F /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F85C12461B28255D0027C37F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F85C12471B28255D0027C37F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F85C12481B28255D0027C37F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		F85C124C1B28351E0027C37F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85C124D1B28351E0027C37F /* QuartzCore.framework in Frameworks */,
 				F85C124A1B28255D0027C37F /* FBSDKLoginKit.framework in Frameworks */,
 				F85C12491B28255D0027C37F /* FBSDKCoreKit.framework in Frameworks */,
 				F85C124B1B28255D0027C37F /* FBSDKShareKit.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		F85C12451B28252D0027C37F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F85C124C1B28351E0027C37F /* QuartzCore.framework */,
 				F85C12461B28255D0027C37F /* FBSDKCoreKit.framework */,
 				F85C12471B28255D0027C37F /* FBSDKLoginKit.framework */,
 				F85C12481B28255D0027C37F /* FBSDKShareKit.framework */,

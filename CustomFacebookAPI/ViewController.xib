@@ -7,6 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="activityIndicator" destination="Iqb-ji-GwR" id="64f-QU-lbn"/>
+                <outlet property="btnToggleLoginState" destination="Q5k-Yl-Bi6" id="b45-Pe-p8T"/>
+                <outlet property="imgProfilePicture" destination="7dJ-yq-tbS" id="KVA-AB-qj5"/>
+                <outlet property="lblEmail" destination="eoD-Ox-5CO" id="Q1L-PP-Br7"/>
+                <outlet property="lblFullname" destination="H81-NE-evr" id="UW4-pX-lyw"/>
+                <outlet property="lblStatus" destination="HIx-dr-M2F" id="xqH-bf-EwU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2zQ-04-yLg"/>
             </connections>
         </placeholder>
@@ -56,6 +62,9 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="toggleLoginState:" destination="-1" eventType="touchUpInside" id="aNy-61-Nvd"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoD-Ox-5CO">
                     <rect key="frame" x="20" y="148" width="280" height="21"/>
