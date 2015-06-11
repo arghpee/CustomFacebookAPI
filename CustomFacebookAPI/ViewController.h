@@ -17,8 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblFullname;
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 @property (weak, nonatomic) IBOutlet UILabel *lblStatus;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *btnToggleLoginState;
+@property (weak, nonatomic) IBOutlet UILabel *lblGender;
 
 -(IBAction)toggleLoginState:(id)sender;
 

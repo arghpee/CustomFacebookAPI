@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D030CDC5C33392E90B6F61F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0EFF9AB20669B553274D4D /* libPods.a */; };
 		F85C12201B28224C0027C37F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F85C121F1B28224C0027C37F /* main.m */; };
 		F85C12231B28224C0027C37F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F85C12221B28224C0027C37F /* AppDelegate.m */; };
 		F85C12261B28224C0027C37F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85C12251B28224C0027C37F /* ViewController.m */; };
@@ -32,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D0EFF9AB20669B553274D4D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC21B1B02441E96FA0800B0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F7891DF62630B8A61C594526 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F85C121A1B28224C0027C37F /* CustomFacebookAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomFacebookAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85C121E1B28224C0027C37F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85C121F1B28224C0027C37F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 				F85C124A1B28255D0027C37F /* FBSDKLoginKit.framework in Frameworks */,
 				F85C12491B28255D0027C37F /* FBSDKCoreKit.framework in Frameworks */,
 				F85C124B1B28255D0027C37F /* FBSDKShareKit.framework in Frameworks */,
+				0D030CDC5C33392E90B6F61F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734A7B71009611DCE0F8AA19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7891DF62630B8A61C594526 /* Pods.debug.xcconfig */,
+				DC21B1B02441E96FA0800B0E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F85C12111B28224C0027C37F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,7 @@
 				F85C12361B28224C0027C37F /* CustomFacebookAPITests */,
 				F85C121B1B28224C0027C37F /* Products */,
 				F85C12451B28252D0027C37F /* Frameworks */,
+				734A7B71009611DCE0F8AA19 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +157,7 @@
 				F85C12461B28255D0027C37F /* FBSDKCoreKit.framework */,
 				F85C12471B28255D0027C37F /* FBSDKLoginKit.framework */,
 				F85C12481B28255D0027C37F /* FBSDKShareKit.framework */,
+				6D0EFF9AB20669B553274D4D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F85C123D1B28224C0027C37F /* Build configuration list for PBXNativeTarget "CustomFacebookAPI" */;
 			buildPhases = (
+				21E78F736417B4C9469BC403 /* Check Pods Manifest.lock */,
 				F85C12161B28224C0027C37F /* Sources */,
 				F85C12171B28224C0027C37F /* Frameworks */,
 				F85C12181B28224C0027C37F /* Resources */,
+				DBE605D21D509CCB79DA164D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +259,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E78F736417B4C9469BC403 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE605D21D509CCB79DA164D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F85C12161B28224C0027C37F /* Sources */ = {
@@ -373,6 +424,7 @@
 		};
 		F85C123E1B28224C0027C37F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7891DF62630B8A61C594526 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -387,6 +439,7 @@
 		};
 		F85C123F1B28224C0027C37F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC21B1B02441E96FA0800B0E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -452,6 +505,7 @@
 				F85C123F1B28224C0027C37F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F85C12401B28224C0027C37F /* Build configuration list for PBXNativeTarget "CustomFacebookAPITests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +514,7 @@
 				F85C12421B28224C0027C37F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
