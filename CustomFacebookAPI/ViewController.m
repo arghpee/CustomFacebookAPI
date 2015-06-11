@@ -18,6 +18,7 @@
 - (void)setUserInfo;
 - (void)logInUser;
 - (void)logOutUser;
+- (void)showLogOutActionSheet;
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
 
@@ -64,7 +65,7 @@
 
 - (IBAction)toggleLoginState:(id)sender {
     if ([self isUserLoggedIn]) { // User wants to log out
-        [self logOutUser];
+        [self showLogOutActionSheet];
     }
     else { // User wants to log in
         [self logInUser];
@@ -127,6 +128,20 @@
     [self hideUserInfo:YES];
     self.lblStatus.text = @"You are not logged in.";
     [FBSDKAccessToken setCurrentAccessToken:nil];
+}
+
+- (void) showLogOutActionSheet {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to log out?"                                                                          delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:@"Log Me Out"
+                                                    otherButtonTitles:nil];
+    [actionSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Log Me Out"]) {
+        [self logOutUser];
+    }
 }
 
 @end

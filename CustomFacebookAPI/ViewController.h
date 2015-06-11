@@ -11,7 +11,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgProfilePicture;
 @property (weak, nonatomic) IBOutlet UILabel *lblFullname;
